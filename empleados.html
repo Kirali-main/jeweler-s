@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWELER'S</title>
+    <link rel="stylesheet" href="sesion.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="JS/bootstrap.bundle.js"></script>
+</head>
+<body class="body">
+    <!-- Barra izquierda -->
+<div class="barra col-12 col-md-3 col-lg-2"><br>
+    <button class="boton-dn" type="submit"><i class="bi bi-moon-fill"></i></button>
+    <h2><strong>JEWELER'S</strong></h2><br><br>
+    <ul class="apartado">
+    <li><a class="text" href="ventas.html">Vender</a></li><br><br>
+    <li><a class="text" href="inventario.html">Inventario</a></li><br><br>
+    <li><a class="text" href="facturas.html">Facturas</a></li><br><br>
+    <li><a class="text" href="reporte.html">Reporte</a></li><br><br>
+    <li><a class="text" href="deudas.html">Deudas</a></li><br><br>
+    <li><a class="text" href="#"><strong>Empleados</strong></a></li>
+    </ul>
+    <button class="boton-c" onclick="location.href='inicio.html'">Cerrar sesión</button>
+</div>
+<!-- Contenido principal -->
+<div class="nave col-12 col-md-9 col-lg-10">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <form class="d-flex me-2" role="search">
+                        <input class="form-v" type="text" placeholder="Buscar" aria-label="Search">
+                        <button class="form-vi" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                    </form>
+                    <button class="boton-n" type="button" data-bs-toggle="modal" data-bs-target="#modalrede2" placeholder="Nuevo empleado">Nuevo empleado    <i class="bi bi-person-plus-fill"></i></button>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="nave">
+    <div class="row1">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Correo</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th>
+                        <img src="IMG/sol.png" alt="Icono" style="width: 30%; height: 30%;">
+                    </th>
+                    <td>X</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>@</td>
+                    <td><button class="boton-n" data-bs-toggle="modal" data-bs-target="#modaledit"><i class="bi bi-pencil-square"></i></button></td>
+                    <td><button class="boton-n" data-bs-toggle="modal" data-bs-target="#modalelim"><i class="bi bi-trash3-fill"></i></i></button></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="IMG/sol.png" alt="Icono" style="width: 30%; height: 30%;">
+                    </th>
+                    <td>X</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>@</td>
+                    <td><button class="boton-n" data-bs-toggle="modal" data-bs-target="#modaledit"><i class="bi bi-pencil-square"></i></button></td>
+                    <td><button class="boton-n eliminar-btn" data-bs-toggle="modal" data-bs-target="#modalelim" data-id="empleado1"><i class="bi bi-trash3-fill"></i></button></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="IMG/sol.png" alt="Icono" style="width: 30%; height: 30%;">
+                    </th>
+                    <td>X</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>@</td>
+                    <td><button class="boton-n" data-bs-toggle="modal" data-bs-target="#modaledit"><i class="bi bi-pencil-square"></i></button></td>
+                    <td><button class="boton-n eliminar-btn" data-bs-toggle="modal" data-bs-target="#modalelim" data-id="empleado1"><i class="bi bi-trash3-fill"></i></button></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="IMG/sol.png" alt="Icono" style="width: 30%; height: 30%;">
+                    </th>
+                    <td>X</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>@</td>
+                    <td><button class="boton-n" data-bs-toggle="modal" data-bs-target="#modaledit"><i class="bi bi-pencil-square"></i></button></td>
+                    <td><button class="boton-n eliminar-btn" data-bs-toggle="modal" data-bs-target="#modalelim" data-id="empleado1"><i class="bi bi-trash3-fill"></i></button></td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+<!-- Modal registro-->
+<div class="modal fade" id="modalrede2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col tex">
+                            <h3><strong>Registro empleados</strong></h3>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <img src="IMG/sol.png" alt="Icono" style="width: 90%; height: 90%;">
+                        </div>
+                        <div class="col tex">
+                            <label class="" for="btn3">Nombres</label><br>
+                            <input class="boton-h1" type="text" placeholder="Nombres del nuevo empleado" aria-label="" required>
+                            <br><br>
+                            <label class="" for="btn3">Apellidos</label><br>
+                            <input class="boton-h1" type="text" placeholder="Apellidos del nuevo empleado" aria-label="" required>
+                            <br><br>
+                            <label class="" for="btn3">Numero de identificación</label><br>
+                            <input class="boton-h1" type="number" placeholder="Documento del nuevo empleado" aria-label="" required>
+                            <br><br>
+                            <label class="" for="btn3">Dirección</label><br>
+                            <input class="boton-h1" type="text" placeholder="Dirección del nuevo empleado" aria-label="" required>
+                            <br><br>
+                            <label class="" for="btn3">Correo electronico</label>
+                            <input class="boton-h1" type="email" placeholder="Correo del nuevo empleado" aria-label="" required>
+                        </div>
+                        <div class="mt-4 d-flex justify-content-center">
+                            <button type="button" class="boton-n me-2" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="boton-n">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal editar -->
+<div class="modal fade" id="modaledit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col tex">
+                        <h3><strong>Editar empleado</strong></h3>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <img src="IMG/sol.png" alt="Icono" style="width: 90%; height: 90%;">
+                    </div>
+                    <div class="col tex">
+                        <label class="" for="btn3">Nombres</label><br>
+                        <input class="boton-h1" type="text" placeholder="Nombres del empleado" aria-label="">
+                        <br><br>
+                        <label class="" for="btn3">Apellidos</label><br>
+                        <input class="boton-h1" type="text" placeholder="Apellidos del empleado" aria-label="">
+                        <br><br>
+                        <label class="" for="btn3">Dirección</label><br>
+                        <input class="boton-h1" type="text" placeholder="Dirección del empleado" aria-label="">
+                        <br><br>
+                        <label class="" for="btn3">Correo electronico</label>
+                        <input class="boton-h1" type="email" placeholder="Correo del empleado" aria-label="">
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <button type="button" class="boton-n me-2" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="boton-n">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal eliminar -->
+<div class="modal fade" id="modalelim" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col tex">
+                        <h3><strong>¿Eliminar empleado?</strong></h3>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col tex">
+                        <button type="button" class="boton-n" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div class="col tex">
+                        <button type="submit" class="boton-n me-2" data-bs-toggle="modal" data-bs-target="#modalr">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal - confirmar contraseña -->
+<div class="modal fade" id="modalr"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+    <div class="modal-dialog modcuer"> 
+      <div class="modal-content colr"> 
+        <div class="modal-body colr"> 
+            <h2><strong>JEWELER'S</strong></h2>
+            <form>
+                <label for="password">Confirmar contraseña</label><br>
+                <input class="input" type="password" id="email" name="correo" required>
+                <br>
+                <br>
+                <button class="boton" type="submit" onclick="location.href='empleados-1.html'">Eliminar</button> 
+            </form>
+        </div> 
+      </div> 
+    </div> 
+</div>
+</body>
+</html>
