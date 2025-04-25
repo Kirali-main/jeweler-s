@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWELER'S</title>
+    <link rel="stylesheet" href="sesion.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="JS/bootstrap.bundle.js"></script>
+</head>
+<body class="body">
+    <!-- Barra izquierda -->
+<div class="barra"><br>
+    <button class="boton-dn" type="submit"><i class="bi bi-moon-fill"></i></button>
+    <h2><strong>JEWELER'S</strong></h2><br><br>
+    <ul class="apartado">
+    <li><a class="text" href="ventas.html">Vender</a></li><br><br>
+    <li><a class="text" href="inventario.html">Inventario</a></li><br><br>
+    <li><a class="text" href="#"><strong>Facturas</strong></a></li><br><br>
+    <li><a class="text" href="reporte.html">Reporte</a></li><br><br>
+    <li><a class="text" href="deudas.html">Deudas</a></li><br><br>
+    <li><a class="text" href="empleados.html">Empleados</a></li>
+    </ul>
+    <button class="boton-c" onclick="location.href='inicio.html'">Cerrar sesión</button>
+</div>
+<!-- Modal factura devuelta -->
+<div class="modal fade" id="modalrede2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body">
+                <div class="row"><div class="col tex"><h3><strong>JEWELER'S</strong></h3></div></div><br>
+                <div class="row"><div class="col tex1"><p>Numero de factura: 0001</p></div></div>
+                <div class="row"><div class="col tex1"><p>Fecha: XX/XX/XXXX</p></div></div>
+                <div class="row"><div class="col tex1"><p>Nombre del cliente: XXXXXXXXXX</p></div></div>
+                <div class="row"><div class="col tex1"><p>Motivo de devolución: XXXXXXXXXX</p></div></div><hr>
+                <div class="row"><div class="col tex"><p>Cantidad</p></div><div class="col tex"><p>Nombre del producto</p></div><div class="col tex"><p>Precio</p></div></div>
+                <div class="row"><div class="col tex"><p>X</p></div><div class="col tex"><p>XXXXXXXX</p></div><div class="col tex"><p>XXXXXXX</p></div></div><hr>
+                <div class="row"><div class="col tex2"><p>Total: XXXXXXXXXX</p></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal reg-devoluciones -->
+<div class="modal fade" id="modalrede" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body ">
+                <div class="row"><div class="col tex"><h3><strong>JEWELER'S</strong></h3></div></div><br>
+                <div class="row"><div class="col tex1"><label for="exampleFormControlInput1" class="form-label">Nombre del cliente</label><input type="text" class="form-control " id="exampleFormControlInput1"></div></div>
+                <div class="row"><div class="col tex1"><label for="exampleFormControlInput2" class="form-label">C.C.</label><input type="integer" class="form-control " id="exampleFormControlInput2"></div></div><br>
+                <div class="row"><div class="col tex1"><textarea class="form-control " placeholder="Motivo de devolución" id="exampleFormControlTextarea1" rows="3"></textarea></div></div><hr>
+                <div class="row"><div class="col tex"><p>Cantidad</p></div><div class="col tex"><p>Nombre del producto</p></div><div class="col tex"><p>Precio</p></div></div>
+                <div class="row"><div class="col tex"><p>X</p></div><div class="col tex"><p>XXXXXXXX</p></div><div class="col tex"><p>XXXXXXX</p></div></div><hr>
+                <div class="row"><div class="col tex2"><p>Total: XXXXXXXXXX</p></div></div>
+                <div class="row"><div class="col tex2"><button type="button" class="boton-ope" data-bs-toggle="modal" data-bs-target="#modalrede2">Generar</button></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contenido principal -->
+<div class="nave">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <form class="d-flex me-2" role="search">
+                        <input class="form-v" type="text" placeholder="Buscar" aria-label="Search">
+                        <button class="form-vi" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                    </form>
+                    <select class="boton-n me-2" >
+                        <option selected>Filtrar ☰</option>
+                        <option value="1">Este mes</option>
+                        <option value="2">Mes pasado</option>
+                        <option value="3">Este año</option>
+                        <option value="3">Año pasado</option>
+                    </select>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="nave">
+    <div class="row">
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+        <div class="col1">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modalrede2">
+                <div class="card-body">
+                    <p class="text1" data-bs-toggle="modal" data-bs-target="#modalfact">
+                        <strong>Producto vendido</strong><br>
+                        XXXXXXX - $000.000<br>
+                        <strong>Fecha de venta</strong><br>
+                        XX/XX/XXXX<br>
+                    </p>
+                    <button class="boton" data-bs-toggle="modal" data-bs-target="#modalrede">Devolución</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal factura -->
+<div class="modal fade" id="modalfact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header "><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body ">
+            <div class="row"><div class="col tex"><h3><strong>JEWELER'S</strong></h3></div></div>
+            <br>
+            <div class="row"><div class="col tex1"><p>Numero de factura: 0001</p></div></div>
+            <div class="row"><div class="col tex1"><p>Fecha: XX/XX/XXXX</p></div></div>
+            <div class="row"><div class="col tex1"><p>Medios de pago: XXXXXXXXXX</p></div></div>
+            <div class="row"><div class="col tex1"><p>Nombre del cliente: XXXXXXXXXX</p></div></div>
+            <div class="row"><div class="col tex1"><p>C.C. XXXXXXXXXX</p></div></div><hr>
+            <div class="row"><div class="col tex"><p>Cantidad</p></div><div class="col tex"><p>Nombre del producto</p></div><div class="col tex"><p>Precio</p></div></div>
+            <div class="row"><div class="col tex"><p>X</p></div><div class="col tex"><p>XXXXXXXX</p></div><div class="col tex"><p>XXXXXXX</p></div></div><hr>
+            <div class="row"><div class="col tex2"><p>Total: XXXXXXXXXX</p></div></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
