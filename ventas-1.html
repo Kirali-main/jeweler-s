@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWELER'S</title>
+    <link rel="stylesheet" href="sesion.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="JS/bootstrap.bundle.js"></script>
+</head>
+<body class="body">
+<!-- Barra izquierda -->
+<div class="barra"><br>
+    <button class="boton-dn" type="submit">☀</button>
+    <h2><strong>JEWELER'S</strong></h2><br><br>
+    <ul class="apartado">
+    <li><a class="text" href="#"><strong>Vender</strong></a></li><br><br>
+    <li><a class="text" href="#">Inventario</a></li><br><br>
+    <li><a class="text" href="#">Factura</a></li><br><br>
+    <li><a class="text" href="#">Reporte</a></li><br><br>
+    <li><a class="text" href="#">Deudas</a></li><br><br>
+    <li><a class="text" href="#">Empleados</a></li>
+    </ul>
+    <button class="boton-c" onclick="location.href='inicio.html'">Cerrar sesión</button>
+</div>
+<!-- Barra derecha -->
+<div class="centro">
+    <div class="barra-derecha">
+        <h4><strong>Pago</strong></h4>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btncheck1">A contado</label>
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btncheck2">A crédito</label>
+        </div>
+        <br>
+        <br>
+        <h6>Fecha de venta</h6>
+        <input type="date" class="boton" id="fecha" autocomplete="on">
+        <br>
+        <br>
+        <h6>Cliente</h6>
+        <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Seleccione un cliente
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="btn" href="#">Agregar nuevo cliente +</a></li>
+            <li><a class="dropdown-item" href="#">Cliente #1</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Buscar cliente 🔍</a></li>
+        </ul>
+        <br>
+        <br>
+        <h6>Descuento (opcional)</h6>
+        <input class="form-v boton-s" type="number" placeholder="Ingrese el descuento">
+        <br>
+        <br>
+        <h6>Dividir pago</h6>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btn1" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btn1" data-bs-toggle="collapse" data-bs-target="#1">1</label>
+            <input type="checkbox" class="btn-check" id="btn2" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btn2" data-bs-toggle="collapse" data-bs-target="#2">2</label>
+            <input type="checkbox" class="btn-check " id="btn3" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btn3" data-bs-toggle="collapse" data-bs-target="#3">3</label>
+            <input type="checkbox" class="btn-check" id="btn4" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btn4" data-bs-toggle="collapse" data-bs-target="#4">4</label>
+            <input type="checkbox" class="btn-check" id="btn5" autocomplete="off">
+            <label class="btn btn-outline- boton-s" for="btn5" data-bs-toggle="collapse" data-bs-target="#otro">Otro</label>
+        </div>
+        <hr>
+        <div class="collapse" id="1">
+            <div class="card card-body">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn2" autocomplete="off">
+                            <label class="btn btn-outline- boton-ope" for="btn2">Efectivo</label>                
+                            <input type="checkbox" class="btn-check" id="btn2" autocomplete="off">
+                            <label class="btn btn-outline- boton-ope" for="btn2">Nequi</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" class="btn-check " id="btn3" autocomplete="off">
+                            <label class="btn btn-outline- boton-ope" for="btn3">Otro</label>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="collapse" id="2">
+            <div class="card card-body cardfij">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <div class="row">
+                        Pago 1
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    <br>
+                    <div class="row">Pago 2</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="collapse" id="3">
+            <div class="card card-body cardfij">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <div class="row">
+                        Pago 1
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    <br>
+                    <div class="row">Pago 2</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    <br>
+                    <div class="row">Pago 3</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="collapse" id="4">
+            <div class="card card-body cardfij">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <div class="row">
+                        Pago 1
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    <br>
+                    <div class="row">Pago 2</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    <br>
+                    <div class="row">Pago 3</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    <br>
+                    <div class="row">Pago 4</div>
+                        <div class="col">
+                            <p>Monto</p>
+                            <input class="form-v boton-op" type="number" placeholder="Valor">
+                            <br> 
+                        </div>
+                        <div class="col">    
+                            <br>        
+                            <a class="boton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Metodo de pago
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Efectivo</a></li>
+                                <li><a class="dropdown-item" href="#">Nequi</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjeta</a></li>
+                                <li><a class="dropdown-item" href="#">Sistecredito</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <button class="boton-p" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Detalles de pago</button>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body tex">
+                <div class="row">
+                    <div class="col">
+                        <p><strong>Descuentos</strong></p>
+                    </div>
+                    <div class="col">
+                        <p>$0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><strong>Subtotal sin impuestos</strong></p>
+                    </div>
+                    <div class="col">
+                        <p>$0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><strong>Impuestos</strong></p>
+                    </div>
+                    <div class="col">
+                        <p>$0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><strong>Subtotal con impuestos</strong></p>
+                    </div>
+                    <div class="col">
+                        <p>$0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="boton-ope"data-bs-toggle="modal" data-bs-target="#modalpago">Vender</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal pago  -->
+<div class="modal fade" id="modalpago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Calcular cambio</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col tex1">
+                    <p><strong>Valor de la venta</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="lab-pag" >$0</label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col tex1">
+                    <p><strong>Valor a pagar en Efectivo</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="lab-pag" >$0</label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col tex1">
+                    <p><strong>Pago</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="lab-pag" >$0</label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col tex1">
+                    <p><strong>Pago</strong></p>
+                </div>
+                <div class="col tex2">
+                    <p><strong>$0</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn boton-n">Facturar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Contenido principal -->
+<div class="contenido-central">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <a class="boton-n me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filtrar ☰
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Anillos</a></li>
+                            <li><a class="dropdown-item" href="#">Aretes</a></li>
+                            <li><a class="dropdown-item" href="#">Pulseras</a></li>
+                            <li><a class="dropdown-item" href="#">Collares</a></li>
+                        </ul>
+                        <button class="boton-n me-2" type="submit">Venta sin registro</button>
+                        <form class="d-flex me-2" role="search">
+                            <input class="form-v me-2" type="text" placeholder="Buscar                          🔍" aria-label="Search">
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="text1">
+                        Anillo de oro 21k<br>
+                        Valor - 800.000<br>
+                        Cantidad - 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="IMG/sol.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="text1">
+                        Anillo de oro 21k<br>
+                        Valor - 800.000<br>
+                        Cantidad - 1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="IMG/sol.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="text1">
+                            Anillo de oro 21k<br>
+                            Valor - 800.000<br>
+                            Cantidad - 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="IMG/sol.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="text1">
+                            Anillo de oro 21k<br>
+                            Valor - 800.000<br>
+                            Cantidad - 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
